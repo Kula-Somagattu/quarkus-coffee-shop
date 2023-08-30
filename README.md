@@ -6,6 +6,11 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 ## Running the application in dev mode
 
+Run docker compose to start infinispan, kafka
+```shell script
+docker-compose -f src/main/docker-compose/docker-compose-infinispan.yml  up -d
+```
+
 You can run your application in dev mode that enables live coding using:
 ```shell script
 mvn quarkus:dev -Dquarkus.infinispan-client.use-auth=false -Dquarkus.infinispan-client.server-list=localhost:11222
